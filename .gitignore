@@ -1,0 +1,15 @@
+
+# Arquivos locais de configuração
+.env
+.env.*
+
+# Cache e arquivos temporários do Python
+__pycache__/
+*.pyc
+
+# Ambientes virtuais Python
+.venv/
+venv/
+
+# Arquivos de configuração do editor
+.vscode/

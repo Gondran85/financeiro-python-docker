@@ -1,0 +1,18 @@
+
+# Configurações locais
+.env
+.env.*
+
+# Histórico do Git
+.git
+
+# Arquivos temporários do Python
+__pycache__/
+*.pyc
+
+# Ambientes virtuais
+.venv/
+venv/
+
+# Configurações do editor
+.vscode/
