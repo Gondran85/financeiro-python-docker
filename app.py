@@ -1,6 +1,8 @@
 
 # Importa o módulo que permite acessar variáveis de ambiente
 import os
+# Importa a função de cálculo de saldo financeiro
+from financeiro import calcular_saldo
 
 # Lê os valores enviados pelo ambiente
 # Se não forem informados, utiliza os valores padrão
@@ -8,7 +10,8 @@ receita = float(os.getenv("RECEITA", "5000"))
 despesas = float(os.getenv("DESPESAS", "3200"))
 
 # Calcula o saldo restante
-saldo = receita - despesas
+saldo = calcular_saldo(receita, despesas)
+
 
 if saldo < 0:
     print("=== ALERTA FINANCEIRO ===")
