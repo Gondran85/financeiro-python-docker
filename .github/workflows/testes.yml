@@ -1,0 +1,30 @@
+
+# Nome da automação no GitHub
+name: Testes Python
+
+# Quando a automação será executada
+on:
+  push:
+    branches: [main]
+
+# Trabalhos que serão executados
+jobs:
+  testar:
+    # Máquina virtual utilizada
+    runs-on: ubuntu-latest
+
+    # Etapas do trabalho
+    steps:
+      # Baixa o código do repositório para o runner
+      - name: Obter codigo
+        uses: actions/checkout@v6
+
+      # Configura a versão do Python
+      - name: Configurar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      # Executa nossos testes automatizados
+      - name: Executar testes
+        run: python -m unittest -v test_financeiro
